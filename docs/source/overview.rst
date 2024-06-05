@@ -1,4 +1,5 @@
-..  -*- coding: utf-8 -*-
+.. image:: _static/banner.jpg
+  :alt: pyswmm banner
 
 Overview
 ========
@@ -40,7 +41,7 @@ PySWMM is intended to provide
 -  a coding interface to binary output files,
 
 -  new modeling possibilities for the SWMM5 Community.
- 
+
 Free software
 -------------
 
@@ -48,13 +49,13 @@ PySWMM is free software; you can redistribute it and/or
 modify it under the terms of the :doc:`BSD License </reference/legal>`.
 We welcome contributions from the community.  Information on
 PySWMM development is found at the PySWMM Github Page
-https://github.com/OpenWaterAnalytics/pyswmm
+https://github.com/pyswmm/pyswmm
 
 
 What Next
 ^^^^^^^^^
 
- - :doc:`A Brief Tour </tutorial/tutorial>`
+ - :doc:`A Brief Tour </tutorial>`
 
  - :doc:`Installing </install>`
 

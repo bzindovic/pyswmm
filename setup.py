@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # -----------------------------------------------------------------------------
-# Copyright (c) 2014 Bryant E. McDonnell
+# Copyright (c) 2023 Bryant E. McDonnell
 #
 # Licensed under the terms of the BSD2 License
 # See LICENSE.txt for details
@@ -33,14 +33,15 @@ def get_version(module='pyswmm'):
 
 def get_description():
     """Get long description."""
-    with open(os.path.join(HERE, 'README.rst'), 'r') as f:
+    with open(os.path.join(HERE, 'README.md'), 'r') as f:
         data = f.read()
     return data
 
 
 REQUIREMENTS = ['swmm-toolkit>=0.9.0',
                 'julian>=0.14',
-                'aenum>=3.1.11']
+                'aenum>=3.1.11',
+                'packaging']
 
 
 setup(
@@ -48,9 +49,19 @@ setup(
     version=get_version(),
     description='Python Wrapper for SWMM5 API',
     long_description=get_description(),
-    url='https://github.com/OpenWaterAnalytics/pyswmm/wiki',
+    long_description_content_type='text/markdown',
+    url='https://www.pyswmm.org',
     author='Bryant E. McDonnell (See AUTHORS)',
     install_requires=REQUIREMENTS,
+    extras_require = {
+        'swmm5.1.14':['swmm-toolkit==0.9.1'],
+        'swmm5.1.15':['swmm-toolkit==0.10.0'],
+        'swmm5.2.0' :['swmm-toolkit==0.11.0'],
+        'swmm5.2.1' :['swmm-toolkit==0.12.0'],
+        'swmm5.2.2' :['swmm-toolkit==0.13.0'],
+        'swmm5.2.3' :['swmm-toolkit==0.14.0'],
+        'swmm5.2.4' :['swmm-toolkit==0.15.3'],
+    },
     packages=find_packages(exclude=['contrib', 'docs']),
     package_data={
         '': ['LICENSE.txt', 'AUTHORS', 'tests/data/*.inp', 'tests/*.py']
@@ -69,6 +80,8 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Programming Language :: Python",
         "Development Status :: 5 - Production/Stable",
     ])

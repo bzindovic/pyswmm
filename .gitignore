@@ -38,7 +38,11 @@ labels.txt
 # SWMM files
 *.out
 *.rpt
+*.hsf
 *.mp4
 *.chi
 *.CSV
 *.thm
+
+#IDE Folders
+.vscode/

@@ -2,10 +2,15 @@
 
 .. currentmodule:: pyswmm.output
 
-output module
-=================
+Output Module
+==============
 
-.. automodule:: pyswmm.output
-    :members: 
-    :undoc-members:
-    :show-inheritance:
+   .. autosummary::
+      :nosignatures:
+      :toctree: api/
+
+      Output
+      SubcatchSeries
+      NodeSeries
+      LinkSeries
+      SystemSeries
